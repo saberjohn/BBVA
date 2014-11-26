@@ -388,7 +388,7 @@ box-shadow:1px 0px 2px rgba(0,0,0,0.2);
 
 .scroll-top  { line-height:44px;width: 40px;
 height: 40px;display:block !important;z-index:99999;position:fixed;bottom:15px;margin-right: 10px;background-color: rgba(0,0,0,0.5);text-align:center;cursor: pointer;}
-.scroll-top::before{color:#ffffff;-webkit-transition: all 0.25s linear;
+.scroll-top::before{font-size:16px;color:#ffffff;-webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     transition: all 0.25 linear}
