@@ -26,6 +26,32 @@
 
 @import url("skins/wide.css");
 
+@font-face {
+	font-family: "bbvanalyzr";
+	src: url("../fonts/bbvanalyzr.eot");
+	src: url("../fonts/bbvanalyzr.eot#iefix") format("embedded-opentype"),
+	url("../fonts/bbvanalyzr.woff") format("woff"),
+	url("../fonts/bbvanalyzr.ttf") format("truetype"),
+	url("../fonts/bbvanalyzr.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="bbvanalyzr-"]:before, [class*=" bbvanalyzr-"]:before,
+[class^="bbvanalyzr-"]:after, [class*=" bbvanalyzr-"]:after {   
+	color:#000000;
+	font-family: bbvanalyzr;
+	font-size: 30px;
+	font-style: normal;
+	
+}
+.bbvanalyzr-navigate-down:before {
+	content: "\e000";
+}
+.bbvanalyzr-navigate-up:before {
+	content: "\e001";
+
+}
+
 /* ######## 1 - Reset Styles #########  */ 
  
 html, body, div, span, object, iframe,
@@ -68,8 +94,34 @@ input, button, select, textarea {
    font-family: 'Oxygen', sans-serif;
   
 }
-/* 
+/* BBVA Styles */
 
+.selecciona-ciudad{;height:0;top:-60px;z-index:1;position: absolute;padding: 0;-webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);box-shadow: inset 0 3px 6px rgba(0,0,0,.05);margin: 0 auto;width: 100%;}
+#first-select,#second-select{width:100%;margin: 0px auto 10px;line-height: 30px;padding: 0 10px;background-color: #f5f5f5;}
+select{border-radius:0;-webkit-appearance: none;color: #848484;}
+#sidebar-left h1,#sidebar-right h1{text-shadow: 1px 1px 1px rgba(255,255,255,0.4);color: #3fc4d2;font-weight: 400;width: 100%;text-align:  center;padding:10px;font-size: initial;}
+.openSC{position:absolute;top:59px;left:50%;background-color:white;line-height: 20px;cursor:pointer;}
+.openSC span::before{vertical-align: middle;color:#848484;}
+.openSC span:hover::before{color:#3fc4d2;
+-webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25 linear;}
+.openSC:hover + ul.nav{
+	visibility: visible;
+}
+.showSC{visibility:visible;top:0;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25 linear
+}
+.showSC{visibility:visible;top:0;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25 linear
+}
 /* ######## 2 - General Styles ######  */ 
  
 .wrapper { width:940px; margin:auto; }
@@ -77,9 +129,10 @@ input, button, select, textarea {
 .pattern { position:fixed; width:100%; background:url(../img/pattern.png) repeat; top:0; display:block; height:100%; z-index:-180;}
  
 /* ######## 3 - Header ######  */ 
-.header { background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:78px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
+.header { top:0;left:0;width:100%;z-index:9999;background-color:rgba(0,0,0,0.46); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8c000000', endColorstr='#8c000000'); /* IE */ height:78px; box-shadow:0px -1px 0px rgba(0,0,0,0.2)inset, 0px 1px 0px rgba(255,255,255,0.05); }
 .logo { padding:7px 0 0; float:left; }
- 
+.left-panel{left:0;width:300px;background-color: #7c8990;position:absolute;height:100%;box-shadow:5px 0px 5px -2px #000000;-webkit-box-shadow:1px 1px 10px -2px #000000;}
+.right-panel{right:0;width:300px;background-color: #7c8990;position:absolute;height:100%;box-shadow:-2px 1px 10px 1px #000000;}
 .navi { width:360px; float:right; padding:24px 0; }
 .navi ul { float:right; }
 .navi li  { font-size:14px; line-height:2.4; font-weight:400;  text-shadow:1px 1px 1px rgba(0,0,0,0.2); float:left; margin:0 0 0 35px;}
@@ -90,7 +143,7 @@ input, button, select, textarea {
  
 /* ######## 4 - Main Content ######  */ 
 .suby2 { padding:70px 0 112px!important; }
-.main-content { padding:70px 0 40px; text-align:center; }
+.main-content { height:80vh;padding:70px 0 40px; text-align:center; }
 .main-content h3 { font-weight:300; font-size:32px; color:#fff; text-shadow:1px 1px 2px rgba(0,0,0,0.5),1px 1px 4px rgba(0,0,0,0.2); }
 .main-content h3 strong { font-weight:600; }
 .main-content p.subtitles { padding:32px 0 0; font-size:14px; font-weight:400; color:#fff; text-shadow:1px 1px 2px rgba(0,0,0,0.5); }
@@ -127,7 +180,10 @@ input.button-newsletter:hover {  color:#fff; }
 .bt1 { margin: 0 0 0 0px; color:#efefef;  float:right;  ouitline:0;  border-radius:5px; box-shadow:0px 0px 2px rgba(255,255,255,0.5)inset, 0 1px 3px rgba(0,0,0,0.9); width:140px;  padding:10px 0; text-align:center; height:20px; text-shadow:1px 1px 0px rgba(0,0,0,0.1);  font-size:16px; }
 /* ######## 6 - Features ######  */ 
 
-.features { padding:70px 0 70px; height:370px; }
+.features { padding:70px 0 70px; height:370px; z-index:99999;}
+#mapa { position: relative;height: 100vh;}
+#map { position: absolute;top: 0;bottom: 0;width: 100%;}
+.tabbed { padding:70px 0;width:100%; display:block;}
 .features-sticky { padding:148px 0 0; }
 
 .features h3 { text-align:center; font-size:22px; font-weight:300; }
@@ -168,6 +224,7 @@ background: -moz-linear-gradient(top, #fafafa 1%, #f7f7f7 100%);
 }
 
 .tabs-content { 
+position:  relative;
 background: -moz-linear-gradient(top, #f8f8f8 1%, #f2f2f2 100%);
 margin:35px 0 0; height:275px;  display:block; margin:15px 0 0; padding:60px 0;  box-shadow:0px 1px 0px rgba(255, 255, 255, 0.4);  background-color: #f7f7f7;  	border:1px solid #eaeaea; }
 #tabs-1, #tabs2, #tabs3, #tabs-4 { padding:0 30px; }
@@ -329,8 +386,17 @@ box-shadow:1px 0px 2px rgba(0,0,0,0.2);
  
 .wrap { z-index:800;	margin: auto;padding-bottom:20px;}
 
-.scroll-top  { z-index:900; position:fixed; bottom:15px; right:35px; display:none; width:51px; height:35px;  background: url("../img/scrolltop.png") no-repeat scroll 0 0 transparent; }
-.scroll-top a  {  display:block;     width:51px; height:35px;  }
+.scroll-top  { line-height:44px;width: 40px;
+height: 40px;display:block !important;z-index:99999;position:fixed;bottom:15px;margin-right: 10px;background-color: rgba(0,0,0,0.5);text-align:center;cursor: pointer;}
+.scroll-top::before{color:#ffffff;-webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25 linear}
+.scroll-top:hover::before{color:#3fc4d2;-webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25 linear}
+.scroll-top a {  display:block;     width:51px; height:35px;  }
 
 
 /* ######## 15 - About Styles  ######  */
