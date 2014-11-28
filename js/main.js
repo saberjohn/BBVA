@@ -1,4 +1,5 @@
 /*---------  Map -------*/
+/*
 $(function() {
 	var map = L.map('map',{doubleClickZoom: true}).setView([51.2, 7], 11);
 	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -16,7 +17,7 @@ $(function() {
 	map.addControl(rightSidebar);
 	rightSidebar.show();
 	
-	/*Click al marker para mostrar panel derecho*/
+	Click al marker para mostrar panel derecho
 	var markerLeft = L.marker([51.2, 7]).addTo(map).on('click', function () {
 		leftSidebar.toggle();
 	});
@@ -26,6 +27,8 @@ $(function() {
 		rightSidebar.hide();
 	});
 });
+*/
+
 $(function() {
 	$('.openSC').click(function(event) {
 		$('.selecciona-ciudad').toggleClass('showSC');

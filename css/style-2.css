@@ -1,0 +1,42 @@
+.loading { z-index:2; position:fixed; top:48%; left:48%; width:64px; height:64px; background-image:url('images/loading.gif'); }
+
+/*Control Zoom*/
+.leaflet-left .leaflet-control {
+	-webkit-transition: margin-left 1s ease;
+	-moz-transition: margin-left 1s ease;
+	-o-transition: margin-left 1s ease;
+	transition: margin-left 1s ease;
+}
+
+a { cursor:pointer; }
+.leaflet-control-change {
+	margin-left:90px !important;
+}
+
+.l-show { box-shadow: 0 4px 2px -2px gray; }
+
+.count-icon {
+	border:5px solid rgba(255,255,255,0.5);
+	color:#000;
+	font-weight:bold;
+	text-align:center;
+	border-radius:50%;
+	line-height:30px;
+	opacity:0.7;
+}
+
+.color-icon-0 { background:#fff; border: 5px dotted #ff; }
+.color-icon-1 { background:#0001be; }
+.color-icon-2 { background:#025efd; }
+.color-icon-3 { background:#01edff; }
+.color-icon-4 { background:#5fff9f; }
+.color-icon-5 { background:#cfff2f; }
+.color-icon-6 { background:#ffff00; }
+.color-icon-7 { background:#ffdf00; }
+.color-icon-8 { background:#ff8e01; }
+.color-icon-9 { background:#ff6f00; }
+.color-icon-10 { background:#ce0000; }
+
+
+#points-graph { display:none; }
+#points-graph-age { display:none; }
