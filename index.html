@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
   <!-- Page Title -->
-  <title> Marketex - Sell Your Product With Elegance </title>
+  <title>BBVA - #InnovaChallengeMX</title>
 
   <!-- Description and Keyword -->
   <meta name="keywords" content=""/>
@@ -23,7 +23,11 @@
   <link rel="stylesheet" href="css/navs.css"/>
   <link rel="stylesheet" href="css/styles.css"/>
  
-   
+  <link rel="stylesheet" href="css/style-2.css" />
+ <!-- <link href='http://api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.css' rel='stylesheet' />-->
+  <link rel="stylesheet" href="css/bjqs.css">
+  <link rel="stylesheet" href="css/demo.css">
+  
   <!-- Google Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Oxygen:700,300,400" rel="stylesheet" type="text/css"/>
   <link href="http://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet" type="text/css"/>
@@ -34,6 +38,7 @@
 </head>
 
 <body>
+  <span class="loading"></span>
   <!-- Header -->
 	<div id="htop" class="header">
 		<div class="wrapper">
@@ -43,7 +48,7 @@
 			<div class="navi">
 				<ul>
 					<li class="active"><a href="#">Home</a></li>
-					<li ><a href="#" onclick="$('#mapa').animatescroll({padding:0});">Mapa</a></li>
+					<li><a onclick="$('#mapa').animatescroll({padding:0});">Mapa</a></li>
 					<li><a id ="feature" href="about.html">Acerca de...</a></li>
 					<!-- <li><a href="contact.html" id="header">Contacto</a></li> -->
 					<li><a  href="blog.html" id="blog"></a></li>
@@ -63,24 +68,6 @@
 			</div>
 		</div> 
 	</div><!-- END Main Content --> 
-
-	<!-- Main Content 
-	<div class="sub-wrap">
-		<div id="subscriber-wrap" class="subscriber">
-			<div id="subscriber" class="subscriber">
-				<div class="wrapper">
-					<h4>SignUp To Get The Latest News <span>&#38;</span> Updates</h4>
-					MailChimp Signup Form 
-					<div id="mc_embed_signup" class="newsletter-form">
-						<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<input type="email" value="" name="EMAIL" class="email-newsletter" id="mce-EMAIL" placeholder="Your Email Here .." required>
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button-newsletter">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
 	<!-- CONTAINER -->
 	<div class="contain test2" >
@@ -115,44 +102,71 @@
 				</div> 
 			</div>
 		</div><!-- END Features -->
+		
 		<div id="mapa">
-
-				<div id="sidebar-right" class="leaflet-control">
-			<span class="rp bbvanalyzr-navigate-down" ></span>		
-			        <H1>INEGI</H1>
-			        <div class="firstSelect">
-			        	<select name="first-select" id="first-select" >
-			        		<option>-- Selecciona un valor --</option>
-			        		<option value="Sum_POB1">Población Total</option>
-			        		<option value="Sum_VIV1">Vivienda</option>
-			        		<option value="Sum_ECO4">Indice Económico</option>
-			        		<option value="Educa">Educación</option>
-			        		<option value="Conyugal">Situación conyugal</option>
-			        	</select>
-			        </div>
-			        <div class="secondSelect" style="width:100%;">
-			        	<select name="second-select" id="second-select">
-			        	</select>
-			        </div>
-			    </div>
-				<div id="sidebar-left" class="leaflet-control">
-	    			<H1>GRÁFICAS</H1>
-	    			<div class="body-container" style="overflow-y:scroll; ">
-	    				<div class="sl-body">
-	    					<table>
-	    						<tbody class="response_bbva">
-	    							<tr >
-	    								<td></td>
-	    							</tr>
-	    						</tbody>
-	    					</table>
-	    				</div>
-	    				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-	    				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-	    			</div>
+			<div id="sidebar-right" class="leaflet-control">
+				<span class="bbvanalyzr-navigate-down" style="position: absolute;right: 350px;background: red;z-index: 99999;top: 10px;"></span>
+		        <H1>INEGI</H1>
+		        <div class="firstSelect">
+		        	<select name="first-select" id="first-select" >
+		        		<option>-- Selecciona un valor --</option>
+		        		<option value="Sum_POB1">Población Total</option>
+		        		<option value="Sum_VIV1">Vivienda</option>
+		        		<option value="Sum_ECO4">Indice Económico</option>
+		        		<option value="Educa">Educación</option>
+		        		<option value="Conyugal">Situación conyugal</option>
+		        	</select>
+		        </div>
+		        
+		        <div class="secondSelect" style="width:100%;">
+		        	<select name="second-select" id="second-select">
+		        	</select>
+		        </div>
+		        
+		        
+		    </div>
+		    
+			<div id="sidebar-left" class="leaflet-control">
+    			<H1>GRÁFICAS</H1>
+    			
+    			<p>Código postal: <span class="zipcode"></span></p>
+			
+				<select id="graph-type">
+					<option value="avg" selected="selected">Promedio de pago</option>
+					<option value="num_payments">Número de pagos</option>
+					<option value="num_cards">Número de tarjetas (Solo por día)</option>
+				</select>
+				
+				<div id="banner-slide">
+					<ul class="bjqs"></ul>
 				</div>
-			<div id="map">
+				
+    			<div class="sl-body">
+    				<table>
+    					<tbody>
+    						<tr>
+    							<td>avg
+									date
+									max
+									min
+									mode
+									num_cards
+									num_merchants
+									num_payments
+									peak_payments_day
+									peak_payments_hour
+									std
+									valley_payments_day
+									valley_payments_hour</td>
+    						</tr>
+    					</tbody>
+    				</table>
+    			</div>
 			</div>
+			
+			<!--Map-->
+			<div id="map"></div>
+				
 			<div class="selecciona-ciudad">
 				<ul class="nav nav-pills">
 				  <li id="df" class="active"><a href="#">Ciudad de México</a></li>
@@ -164,6 +178,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- Tabbed Section -->
 		<div id="tabbed" class="tabbed">
 			<div class="wrapper">
@@ -243,208 +258,27 @@
 			</div>
 		</div><!-- END Tabbed Section -->
 
-		<!-- Screenshots Section -->
-		<!-- <div class="screenshots" >
-			<div class="wrapper">
-				<div class="title">
-					<h4>Some <span> Beautiful </span> Screenshots </h4>
-
-					<div class="gallery">
-						<ul  class="row-fluid">
-							<li class="span3"> <a href="img/screenshots/screen1-big.jpg" class="lightbox-go" title="My Screenshot"><img src="img/screenshots/screen1.jpg" class="a" alt=""/> <img src="img/screenshots/hover.png" class="b" alt=""/></a>   </li>
-							<li class="span3"> <a href="img/screenshots/screen2-big.jpg" class="lightbox-go" title="My Screenshot"><img src="img/screenshots/screen2.jpg" class="a" alt=""/> <img src="img/screenshots/hover.png" class="b" alt=""/></a>   </li>
-							<li class="span3"> <a href="img/screenshots/screen3-big.jpg" class="lightbox-go" title="My Screenshot"><img src="img/screenshots/screen3.jpg" class="a" alt=""/> <img src="img/screenshots/hover.png" class="b" alt=""/></a>   </li>
-							<li class="span3"> <a href="img/screenshots/screen4-big.jpg" class="lightbox-go" title="My Screenshot"><img src="img/screenshots/screen4.jpg" class="a" alt=""/> <img src="img/screenshots/hover.png" class="b" alt=""/></a>   </li>
-						</ul>
-
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- END Screenshots Section -->
-
-
-		<!-- Extras Section -->
-		<!-- <div class="extras" >
-			<div class="wrapper">
-				<div class="tabs-img2"> 
-					<img src="img/tabbed-picture2.png" alt="" />
-				</div>
-				<div class="tabs-text2">
-					<h6>The Perfect Showcase.</h6>
-					<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					<a href="#" >Read More</a>
-				</div>
-			</div>
-		</div> -->
-		<!-- END Extras Section -->
-
-		<!-- Pricing Section -->
-		<!-- <div class="pricing">
-			<div class="wrapper">
-				<div class="title">
-					<h3>Optional  <span> Pricing Table </span> For Your Product</h3>  
-				</div>
-
-				<div id="tabs2">
-					<ul class="tabs-nav2">
-						<li class="one"><a class="onea" href="#tabs2-1"> Monthly -</a></li>
-						<li class="two"><a class="twoa" href="#tabs2-2"> - Annualy</a></li>
-					</ul>
-					<div class="tabs-content2">
-						<div id="tabs2-1">
-							<div class="pric-wrap">
-								<div  class="row-fluid">
-									<div class="span4 pric"> 
-										<div class="pric-head">
-											<h6>Standard</h6>
-										</div>
-										<div class="pric-body">
-											<ul>
-												<li><p  class="yes">24/7 Tech Support</p></li>
-												<li><p  class="yes">100GB Storage</p></li>
-												<li><p  class="no">1GB Bandwidth</p></li>
-												<li><p  class="no">Advanced Options</p></li>
-											</ul>
-										</div>
-										<div class="pric-footer">
-											<p>$9<span>.95</span></p>
-											<p class="prs">/monthly</p>
-											<div class="pric-butt"><a href="#">Join Now</a></div>
-										</div>
-									</div>
-
-									<div class="span4 pric"> 
-										<div class="pric-head">
-											<h6>Business</h6>
-										</div>
-										<div class="pric-body">
-											<ul>
-											<li><p  class="yes">24/7 Tech Support</p></li>
-											<li><p  class="yes">100GB Storage</p></li>
-											<li><p  class="yes">1GB Bandwidth</p></li>
-											<li><p  class="no">Advanced Options</p></li>
-											</ul>
-										</div>
-										<div class="pric-footer">
-											<p>$49<span>.95</span></p>
-											<p class="prs">/monthly</p>
-											<div class="pric-butt"><a href="#">Join Now</a></div>
-										</div>
-									</div>
-
-									<div class="span4 prics"> 
-										<div class="pric-head">
-											<h6>Enterprise</h6>
-										</div>
-										<div class="pric-body">
-											<ul>
-												<li><p  class="yes">24/7 Tech Support</p></li>
-												<li><p  class="yes">100GB Storage</p></li>
-												<li><p  class="yes">1GB Bandwidth</p></li>
-												<li><p  class="yes">Advanced Options</p></li>
-											</ul>
-										</div>
-										<div class="pric-footer">
-											<p>$99<span>.95</span></p>
-											<p class="prs">/monthly</p>
-											<div class="pric-butt"><a href="#">Join Now</a></div>
-										</div>
-									</div> 
-								</div>
-							</div>
-						</div>
-						<div id="tabs2-2">
-							<div class="pric-wrap">
-								<div  class="row-fluid">
-									<div class="span4 pric"> 
-										<div class="pric-head">
-											<h6>Standard</h6>
-										</div>
-										<div class="pric-body">
-											<ul>
-												<li><p  class="yes">24/7 Tech Support</p></li>
-												<li><p  class="yes">100GB Storage</p></li>
-												<li><p  class="no">1GB Bandwidth</p></li>
-												<li><p  class="no">Advanced Options</p></li>
-											</ul>
-										</div>
-										<div class="pric-footer">
-											<p>$9<span>.95</span></p>
-											<p class="prs">/annually</p>
-											<div class="pric-butt"><a href="#">Join Now</a></div>
-										</div>
-									</div>
-
-									<div class="span4 pric"> 
-										<div class="pric-head">
-											<h6>Business</h6>
-										</div>
-										<div class="pric-body">
-											<ul>
-											<li><p  class="yes">24/7 Tech Support</p></li>
-											<li><p  class="yes">100GB Storage</p></li>
-											<li><p  class="yes">1GB Bandwidth</p></li>
-											<li><p  class="no">Advanced Options</p></li>
-											</ul>
-										</div>
-										<div class="pric-footer">
-											<p>$49<span>.95</span></p>
-											<p class="prs">/annually</p>
-											<div class="pric-butt"><a href="#">Join Now</a></div>
-										</div>
-									</div>
-
-									<div class="span4 prics"> 
-										<div class="pric-head">
-											<h6>Enterprise</h6>
-										</div>
-										<div class="pric-body">
-											<ul>
-												<li><p  class="yes">24/7 Tech Support</p></li>
-												<li><p  class="yes">100GB Storage</p></li>
-												<li><p  class="yes">1GB Bandwidth</p></li>
-												<li><p  class="yes">Advanced Options</p></li>
-											</ul>
-										</div>
-										<div class="pric-footer">
-											<p>$99<span>.95</span></p>
-											<p class="prs">/annually</p>
-											<div class="pric-butt"><a href="#">Join Now</a></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- END Pricing Section -->
-
-
 		<!-- Testimonials -->
 		<div class="testimonials">
 			<div class="wrapper">
-				<div class="title"> <h3>What <span> Customers </span> Think About Us</h3>  </div>
+				<div class="title"> <h3>El <span> equipo </span> detrás del proyecto</h3>  </div>
 				<div class="slider">
 					<div class="testi">
-						<div class="testi-img"><img src="img/testi.png" alt="" /> </div>
-						<p><span>&#8220;</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span>&#8221;</span></p>
-						<p class="testio">Joelle Doe -<strong> Envato </strong> </p>
+						<div class="testi-img"><img src="img/team/571118.jpg" alt="" /> </div>
+						<p><span>&#8220;</span> Desarrollador, jugador de ajedrez y usuario Linux, siempre aprendiendo e investigando nuevas tecnologías. <span>&#8221;</span></p>
+						<p class="testio">Carlos Hugo Gonzalez -<strong> Developer & Data Analyst</strong> </p>
 					</div>
 
 					<div class="testi">
-						<div class="testi-img"><img src="img/testi2.png" alt="" /> </div>
-						<p><span>&#8220;</span> Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaconsectetur adipisicing elit. <span>&#8221;</span></p>
-						<p class="testio">John Doe -<strong> Appstorm </strong> </p>
+						<div class="testi-img"><img src="img/team/2bf7e01.jpg" alt="" /> </div>
+						<p><span>&#8220;</span> Urbanista especializado en Sistemas de Información Geográfica y apasionado aprendiz de los lenguajes de programación. Consultor en transporte público y mapas digitales. <span>&#8221;</span></p>
+						<p class="testio">Jonathan González -<strong> Data Analyst </strong> </p>
 					</div>
 
 					<div class="testi">
-						<div class="testi-img"><img src="img/testi3.png" alt="" /> </div>
-						<p><span>&#8220;</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  <span>&#8221;</span></p>
-						<p class="testio">Michael Doe -<strong> TutsPlus </strong> </p>
+						<div class="testi-img"><img src="img/team/1803166.jpg" alt="" /> </div>
+						<p><span>&#8220;</span> Because the code is for everyone...!! #Frontend Developer, #Coffee lover, I love my #MacBook, #photograph for inspiration.  <span>&#8221;</span></p>
+						<p class="testio">Mario Flores -<strong> Front-end  </strong> </p>
 					</div>
 				</div>
 
@@ -513,6 +347,7 @@
 		<div onclick="$('#features').animatescroll({padding:0});" class="scroll-top bbvanalyzr-navigate-up" style="right:0px;"></div>
 		<div onclick="$('#tabbed').animatescroll({padding:0});"class="scroll-top bbvanalyzr-navigate-down" style="right:50px;"></div>
 	</div>
+	
 	<!-- Javascript Library -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -522,7 +357,20 @@
 	<script type="text/javascript" src="js/cycle.js"></script>
 	<script type="text/javascript" src="js/slider.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+	<script src='http://api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.js'></script>
 	<script type="text/javascript" src="js/LControlSidebar.js"></script>
+	
+	<script src="js/functions.js"  type="text/javascript"></script>
+	<script src="js/markers.js"  type="text/javascript"></script>
+	<script src="js/jalisco.geojson.js"  type="text/javascript"></script>
+	<script src="js/df.geojson.js"  type="text/javascript"></script>
+	<script src="js/nl.geojson.js"  type="text/javascript"></script>
+	<script src="js/geostats.js" type="text/javascript" ></script>
+	<script src="js/jquery.number.min.js"  type="text/javascript"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+	<script src="js/bjqs-1.3.min.js"></script>
+	<script src='js/leaflet-pip.js'></script>
+	<script src='js/init-min.js'></script>
 </body>
 </html>
