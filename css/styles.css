@@ -122,6 +122,7 @@ select{border-radius:0;-webkit-appearance: none;color: #848484;}
     -o-transition: all 0.25s linear;
     transition: all 0.25 linear
 }
+.rp{position: absolute;right: 330px;background: #ffffff;z-index: 99999;top: 5px;color: #f5f5f5;padding-right: 10px;}
 /* ######## 2 - General Styles ######  */ 
  
 .wrapper { width:940px; margin:auto; }
