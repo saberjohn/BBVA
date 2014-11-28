@@ -419,42 +419,7 @@ function getChartAgeDistribution(age_distribution) {
 				pointStart: Date.UTC(2013, 10, 1),
 				data: age_distribution.am66
 			}
-		],
-		exporting: {
-			buttons: {
-				customButton: {
-					text: 'Fullscreen',
-					_titleKey: 'Fullscreen',
-					onclick: function() {
-						$('#info').css({
-							width: "100%",
-							height: $(window).height(),
-							top: 0,
-							right:0,
-							position:"absolute",
-							margin: 0
-						});
-						
-						this.setSize($(window).width(), $(window).height(), doAnimation = true);
-					}
-				},
-				customButton2: {
-					text: 'Resize',
-					_titleKey: 'Resize',
-					onclick: function() {
-						$('#info').css({
-							width: "500px",
-							height: "400px",
-							top: 130,
-							right:50
-						});
-						
-						this.setSize(500,400, doAnimation = true);
-					}
-				}
-			}
-		}
-
+		]
 	});
 	
 	$("#banner-slide").show();
@@ -535,53 +500,11 @@ function getTimeSeriesChart(day, gender_distribution) {
 				pointStart: Date.UTC(2013, 10, 1),
 				data: gender_distribution.male
 			}
-		],
-		exporting: {
-			buttons: {
-				customButton: {
-					text: 'Fullscreen',
-					_titleKey: 'Fullscreen',
-					onclick: function() {
-						$('#info').css({
-							width: "100%",
-							height: $(window).height(),
-							top: 0,
-							right:0,
-							position:"absolute",
-							margin: 0
-						});
-						
-						this.setSize($(window).width(), $(window).height(), doAnimation = true);
-					}
-				},
-				customButton2: {
-					text: 'Resize',
-					_titleKey: 'Resize',
-					onclick: function() {
-						$('#info').css({
-							width: "500px",
-							height: "400px",
-							top: 130,
-							right:50
-						});
-						
-						this.setSize(500,400, doAnimation = true);
-					}
-				}
-			}
-		}
-
+		]
 	});
 	
 	$("#banner-slide").show();
 	$('#points-graph').show();
-}
-
-function fullscr(chart) {
-	$('#points-graph').css({
-		width: $(window).width(),
-		height: $(window).height()
-	});
 }
 
 function focusCity(idCity) {
