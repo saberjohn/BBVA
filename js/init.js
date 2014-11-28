@@ -1,3 +1,8 @@
+/**
+* Javascript for custom map 
+* Copyright (c) Carlos Hugo Gonzalez Castell, http://www.caarloshugo.info
+* Licensed under the MIT license
+*/
 L.mapbox.accessToken = 'pk.eyJ1IjoiY2Fhcmxvc2h1Z28xIiwiYSI6IklmZGNsNmMifQ.JJksWU3hBP-Vd3S9WtjFsA';
 var map     = L.mapbox.map('map', 'caarloshugo1.h9bggm26').setView([19.4313054168727, -99.1347885131836], 11);
 var bounds  = map.getBounds();
@@ -83,22 +88,14 @@ $(document).ready( function () {
 function printResults(d) {
 	polygonsGroup.clearLayers();
 	
-	var zoom   = map._zoom;
-	
-	/*series ranges geostats*/
+	var zoom  = map._zoom;
 	var items = [];
-	
-	jQuery.each(d.features, function(i, val) {
-		items.push(val.properties[propertySelected]);
-	});
-	
+	jQuery.each(d.features, function(i, val) { items.push(val.properties[propertySelected]); });
 	var serie = new geostats();
 	serie.setSerie(items);
-   	
 	var color_x = new Array('#FFD4C4', '#FF8069', '#E84E3D', '#E63629');
 	var test	= serie.getClassJenks(4);
 	var ranges  = serie.ranges;
-
    	serie.setColors(color_x);
    	
    	function getClass(val, a) {
@@ -118,13 +115,10 @@ function printResults(d) {
 			}
 		}
 	}
-	/*END series ranges geostats*/
 	
 	var polygons = L.geoJson(d, {
 		onEachFeature: onEachFeature,
-		style: function(feature) {
-			return { fillOpacity: 0.6, opacity: 0.7, weight: 1.2, color: "#fff", fillColor: color_x[getClass(feature.properties[propertySelected], ranges)] };
-		}
+		style: function(feature) { return { fillOpacity: 0.6, opacity: 0.7, weight: 1.2, color: "#fff", fillColor: color_x[getClass(feature.properties[propertySelected], ranges)] }; }
 	});
 	
 	polygonsGroup.addLayer(polygons);
@@ -135,12 +129,8 @@ function printResults(d) {
 			map.removeLayer(sMarker);	
 			sMarker = L.marker([e.latlng.lat, e.latlng.lng], { ZipCode : feature.properties.ZipCode }).addTo(map);
 			sMarker.bindPopup("Código postal: " + feature.properties.ZipCode)/*.openPopup()*/;
-			
 			getBasicStats(feature.properties.ZipCode);
-			
-			sMarker.on('click', function () {
-				leftSidebar.show();
-			});
+			sMarker.on('click', function () { leftSidebar.show(); });
 		});
 	}
 
@@ -184,10 +174,7 @@ function getBasicStats(zipcode, point) {
 					
 					//set global array data buffer
 					datazipcode[zipcode] = d;
-					
-					/*call to get series data*/
 					getSeries(d);
-					
 					$(".loading").hide();
 				},
 				error: function (response) {
@@ -203,7 +190,6 @@ function getBasicStats(zipcode, point) {
 	map.setView([sMarker._latlng.lat, sMarker._latlng.lng, map._zoom]);
 }
 
-/*get series data */
 function getSeries(d) {
 	$('#banner-slide ul li').remove();
 	$('#banner-slide .bjqs-markers').remove();
