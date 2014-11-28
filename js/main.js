@@ -19,6 +19,7 @@ $(function() {
 	/*Click al marker para mostrar panel derecho*/
 	var markerLeft = L.marker([51.2, 7]).addTo(map).on('click', function () {
 		leftSidebar.toggle();
+		rightSidebar.hide();
 	});
 
 	map.on('click', function () {
@@ -33,6 +34,21 @@ $(function() {
 	});
 });
 $(document).ready(function() {
+	var bbva_results = [
+			"avg",
+			"date",
+			"max",
+			"min",
+			"mode",
+			"num_cards",
+			"num_merchants",
+			"num_payments",
+			"peak_payments_day",
+			"peak_payments_hour",
+			"std",
+			"valley_payments_day",
+			"valley_payments_hour"
+	]
 	var poblacion = {
 		"Sum_POB8":"Población de 0 a 14 años",
 		"Sum_POB11":"Población de 15 a 29 años",
@@ -77,6 +93,10 @@ $(document).ready(function() {
 				"Sum_SCONY1":"Población soltera o nunca unida de 12 años y más",
 				"Sum_SCONY4":"Población casada o unida de 12 años y más"
 		}
+	 /* ----------- Datos BBVA ----------------------------*/
+	$.each(bbva_results, function(val, text) {
+		$('.response_bbva').append( $('<tr><td>'+val+'</td></tr>'));
+	});
 	var firstSelect = $("#first-select");
 	var secondSelect = $("#second-select");
 	firstSelect.change(function(event) {
