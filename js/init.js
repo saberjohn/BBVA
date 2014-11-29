@@ -199,6 +199,8 @@ function getBasicStats(zipcode, point) {
 		//load buffer local
 		getSeries(datazipcode[zipcode]);
 	}
+	
+	/*data inegi*/
 	var dataZP = false;
 	
 	L.geoJson(dataGeoJson, {
@@ -215,8 +217,35 @@ function getBasicStats(zipcode, point) {
 			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
+	$.each(vivienda, function(val, text) {
+		if(dataZP[val] != undefined) {
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+		}
+	});
+	$.each(economico, function(val, text) {
+		if(dataZP[val] != undefined) {
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+		}
+	});
+	$.each(educacion, function(val, text) {
+		if(dataZP[val] != undefined) {
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+		}
+	});
+	$.each(conyugal, function(val, text) {
+		if(dataZP[val] != undefined) {
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+		}
+	});
+	$.each(unidadeseconomicas, function(val, text) {
+		if(dataZP[val] != undefined) {
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+		}
+	});
 	
 	$('.number-2').number(true, 0);
+	/*data inegi*/
+	
 	map.setView([sMarker._latlng.lat, sMarker._latlng.lng, map._zoom]);
 }
 

@@ -50,6 +50,12 @@ var educacion = {
 	"Sum_EDU46":"Población de 25 años y más con al menos un grado aprobado en educación superior"
 }
 
+var conyugal = {
+	"0":"Selecciona una opción",
+	"Sum_SCONY1":"Población soltera o nunca unida de 12 años y más",
+	"Sum_SCONY4":"Población casada o unida de 12 años y más"
+}
+
 var unidadeseconomicas = {
 	"0":"Selecciona una opción",
 	"Pri0a5":"Sector primario con 0 a 5 personas",
