@@ -47,11 +47,9 @@
 		  <!-- Navigation -->
 			<div class="navi">
 				<ul>
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a onclick="$('#htop').animatescroll({padding:0});">Home</a></li>
 					<li><a onclick="$('#mapa').animatescroll({padding:0});">Mapa</a></li>
-					<li><a id ="feature" href="about.html">Acerca de...</a></li>
-					<!-- <li><a href="contact.html" id="header">Contacto</a></li> -->
-					<li><a  href="blog.html" id="blog"></a></li>
+					<li><a id="feature" onclick="$('#acerca-de').animatescroll({padding:0});">Acerca de</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,11 +58,16 @@
   <!-- Main Content -->
 	<div class="main-content">
 		<div class="wrapper">
-			<h3> <strong>Sell Your Product </strong> Online With Elegance</h3>
-			<p class="subtitles">Marketex is The Ultimate and Multipurpose Landing Page</p>
+			<h3>
+				<strong>AppData </strong> Una herramienta para empresarios
+			</h3>
+			
+			<p class="subtitles">
+				Valida tu mercado, obten estadísticas de consumo y de población
+			</p>
 
 			<div class="video"><a class="video" id="pop-video"><span></span></a>
-				<p id="tool-video"><strong>Watch The Video</strong><span> </span></p>
+				<p id="tool-video"><strong>Ver el Video</strong><span> </span></p>
 			</div>
 		</div> 
 	</div><!-- END Main Content --> 
@@ -74,31 +77,34 @@
 		<!-- Features -->
 		<div id="features" class="features">
 			<div class="wrapper">
-				<div class="title"><h3>Discover This <span>Amazing</span> Product</h3></div>
+				<div class="title"><h3>Descubre esta <span>increíble</span> herramienta</h3></div>
 				<!--   Feature 1  -->
 				<div class="featu">
-					<div class="icon"> <img src="img/icons/buscar.png"  alt="" style="width: 99px;margin-top: 5px;"/>  </div>
-					<h6> Busca</h6>
-					<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit.</p>
-					<div class="step"><p>Step 1</p></div>
+					<div class="icon">
+						<img src="img/icons/buscar.png"  alt="" style="width: 99px;margin-top: 5px;"/>
+					</div>
+					<h6>Busca</h6>
+					<p>Busca donde podrías iniciar o expandir un nuevo proyecto/negocio en el mapa.</p>
 				</div> 
 
 				<div class="featu-div"></div>
 				<!--    Feature 2  -->
 				<div class="featu">
-					<div class="icon"> <img src="img/icons/features2.png" alt="" />  </div>
-					<h6> Crea</h6>
-					<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit.</p>
-					<div class="step"><p>Step 2</p></div>
+					<div class="icon">
+						<img src="img/icons/features2.png" alt="" />
+					</div>
+					<h6>Analiza</h6>
+					<p>Analiza los resultados obtenidos de BBVA, información del INEGI y del censo económico.</p>
 				</div> 
 
 				<div class="featu-div"></div>
 				<!--    Feature 2  -->
 				<div class="featu">
-					<div class="icon"> <img src="img/icons/features3.png" alt="" />  </div>
+					<div class="icon">
+						<img src="img/icons/features3.png" alt="" />
+					</div>
 					<h6>Compara</h6>
-					<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit.</p>
-					<div class="step"><p>Step 3</p></div>
+					<p>Compara los resultados con otros códigos postales.</p>
 				</div> 
 			</div>
 		</div><!-- END Features -->
@@ -166,7 +172,7 @@
 		        		<option value="Sum_ECO4">Indice Económico</option>
 		        		<option value="Educa">Educación</option>
 		        		<option value="Conyugal">Situación conyugal</option>
-		        		<option value="Unidades">Unidades economicas</option>
+		        		<option value="Unidades">Unidades económicas</option>
 		        	</select>
 		        </div>
 
@@ -175,7 +181,8 @@
 		        	</select>
 		        </div>
 		        
-		        
+		        <br/>
+		        <p>Haz clic en el mapa para obtener información de BBVA por código postal</p>
 		    </div>
 		    
 			<div id="sidebar-left" class="leaflet-control">
@@ -232,18 +239,17 @@
 		<div id="tabbed" class="tabbed">
 			<div class="wrapper">
 			<!-- Tabbed Title -->
-				<div class="title">
-					<h3>Tabbed Content For <span> Better Explanation </span> </h3> 
+				<div class="title" id="acerca-de">
+					<h3>Acerca de la <span>herramienta</span> </h3> 
 				</div>
 			</div>
 			<div class="tabbed-features">
 				<div id="tabs">
 					<div class="wrapper"> 
 						<ul class="tabs-nav">
-							<li><a href="#tabs-1"> <img src="img/tabbed1.png" alt="" />What We Do</a></li>
-							<li><a href="#tabs-2"> <img src="img/tabbed2.png" alt="" /></a></li>
-							<li><a href="#tabs-3"> <img src="img/tabbed3.png" alt="" />Metodologia</a></li>
-							<li><a href="#tabs-4"> <img src="img/tabbed4.png" alt="" />Acerca de</a></li>
+							<li><a href="#tabs-1"> <img src="img/tabbed1.png" alt="" />¿Qué hacemos?</a></li>
+							<li><a href="#tabs-2"> <img src="img/tabbed2.png" alt="" />¿Como funciona?</a></li>
+							<li><a href="#tabs-3"> <img src="img/tabbed3.png" alt="" />Metodología</a></li>
 						</ul>
 					</div>
 
@@ -251,11 +257,13 @@
 						<div class="wrapper">
 							<div id="tabs-1">
 								<div class="tabs-text">
-									<h6>The Perfect Showcase.</h6>
-									<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" >Read More</a>
+									<h6>Una herramienta para empresarios</h6>
+									<p>
+										Esta herramienta busca ayudar a los empresarios a tomar mejores desiciones al querer abrir 
+										un nuevo negocio o expandir el actual, basándose en información económica y poblacional.
+									</p>
 								</div>
+								
 								<div class="tabs-img"> 
 									<img src="img/tabbed-picture.png" alt="" />
 								</div>
@@ -263,11 +271,13 @@
 
 							<div id="tabs-2">
 								<div class="tabs-text">
-									<h6>The Awesome Showcase.</h6>
-									<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" >Read More</a>
+									<h6>¿Cómo lo hicimos?</h6>
+									<p class="subtitles">Metodología de obtención de datos</p>
+									<p>
+										Basado en información económica y poblacional con relaciones de análisis espacial por ubiación.
+									</p>
 								</div>
+								
 								<div class="tabs-img"> 
 									<img src="img/tabbed-picture3.png" alt="" />
 								</div>
@@ -275,32 +285,18 @@
 
 							<div id="tabs-3">
 								<div class="tabs-text">
-									<h6>The Ultimate Showcase.</h6>
-									<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" >Read More</a>
+									<h6>¿Cómo lo hicimos?</h6>
+									<p class="subtitles">Metodología de obtención de datos</p>
+									<p>
+										Basado en información económica y poblacional con relaciones de análisis espacial por ubiación.
+									</p>
+									<a href="metodologia.txt" target="_blank" title="Metodología">Leer más</a>
 								</div>
+								
 								<div class="tabs-img"> 
 									<img src="img/tabbed-picture.png" alt="" />
 								</div>
 							</div>
-
-							<div id="tabs-4">
-								<div class="tabs-text">
-									<h6>Your Product Showcase.</h6>
-									<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-									<ul>
-										<li>Lorem ipsum dolor sit amet, consectetur.  </li>
-										<li>Lorem ipsum dolor sit amet, consectetur.  </li>
-										<li>Lorem ipsum dolor sit amet, consectetur.  </li>
-									</ul>
-									<a href="#" >Read More</a>
-								</div>
-								<div class="tabs-img"> 
-									<img src="img/tabbed-picture2.png" alt="" />
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
@@ -315,19 +311,28 @@
 					<div class="testi">
 						<div class="testi-img"><img src="img/team/571118.jpg" alt="" /> </div>
 						<p><span>&#8220;</span> Desarrollador, jugador de ajedrez y usuario Linux, siempre aprendiendo e investigando nuevas tecnologías. <span>&#8221;</span></p>
-						<p class="testio">Carlos Hugo Gonzalez -<strong> Developer & Data Analyst</strong> </p>
+						<p class="testio">
+							<a href="https://twitter.com/caarloshugo" title="Carlos Hugo Gonzalez Castell">Carlos Hugo Gonzalez</a> -
+							<strong> Developer & Data Analyst</strong>
+						</p>
 					</div>
 
 					<div class="testi">
 						<div class="testi-img"><img src="img/team/2bf7e01.jpg" alt="" /> </div>
 						<p><span>&#8220;</span> Urbanista especializado en Sistemas de Información Geográfica y apasionado aprendiz de los lenguajes de programación. Consultor en transporte público y mapas digitales. <span>&#8221;</span></p>
-						<p class="testio">Jonathan González -<strong> Data Analyst </strong> </p>
+						<p class="testio">
+							<a href="https://twitter.com/saberlegion" title="Jonathan González">Jonathan González</a> -
+							<strong> Data Analyst </strong>
+						</p>
 					</div>
 
 					<div class="testi">
 						<div class="testi-img"><img src="img/team/1803166.jpg" alt="" /> </div>
 						<p><span>&#8220;</span> Because the code is for everyone...!! #Frontend Developer, #Coffee lover, I love my #MacBook, #photograph for inspiration.  <span>&#8221;</span></p>
-						<p class="testio">Mario Flores -<strong> Front-end  </strong> </p>
+						<p class="testio">
+							<a href="https://twitter.com/pokaxperia" title="Mario Flores">Mario Flores</a> -
+							<strong> Front-end  </strong>
+						</p>
 					</div>
 				</div>
 
@@ -339,46 +344,19 @@
 			</div>
 		</div>
 		<!-- END Testimonials -->
-
 	</div><!-- END CONTAINER -->
-
-	<!-- Partners -->
-
-	<div class="contain-btm">
-		<div class="partners">
-			<div class="wrapper">
-				<div class="row-fluid prt-div">
-					<div class="span3 prt"><img src="img/partners/partner1.png" alt="" /></div>
-					<div class="span3 prt"><img src="img/partners/partner2.png" alt="" /></div>
-					<div class="span3 prt"><img src="img/partners/partner3.png" alt="" /></div>
-					<div class="span3 prt"><img src="img/partners/partner4.png" alt="" /></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 
 	<div class="footer">
 		<div class="wrapper">
-			<div class="social">
-				<ul>
-					<li class="facebook">
-						<a href="#"></a>
-					</li>
-					<li class="twitter">
-						<a href="#"></a>
-					</li>
-				</ul>
-			</div>
+			<div class="social"></div>
 			<div class="copy">
-				<p><strong>Marketex</strong> &#169; copyright 2012. all rights reserved</p>
+				<p><strong>AppData</strong> &#169; Copyright 2014</p>
 			</div>
 			<div class="copy-nav">
 				<ul>
-					<li class="cpyn"><a href="">Home</a><li>
-					<li class="cpyn"><a href="#" onclick="$('#mapa').animatescroll({padding:0});">Mapa</a><li>
-					<li class="cpyn"><a href="">Acerca de...</a><li>
-					<li><a href="">Contact</a><li>
+					<li class="cpyn"><a onclick="$('#htop').animatescroll({padding:0});">Home</a><li>
+					<li class="cpyn"><a onclick="$('#mapa').animatescroll({padding:0});">Mapa</a><li>
+					<li><a onclick="$('#acerca-de').animatescroll({padding:0});">Acerca de</a><li>
 				</ul>
 			</div>
 		</div>
@@ -389,6 +367,7 @@
 		<iframe src="http://player.vimeo.com/video/7449107"  width="800" height="450"></iframe>
 		<a  id="close2" ></a>
 	</div>
+	
 	<div id="popi-bg"></div>
 	<!-- Pattern -->
 	<div class="pattern"></div>
