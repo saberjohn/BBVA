@@ -47,11 +47,9 @@
 		  <!-- Navigation -->
 			<div class="navi">
 				<ul>
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a onclick="$('#htop').animatescroll({padding:0});">Home</a></li>
 					<li><a onclick="$('#mapa').animatescroll({padding:0});">Mapa</a></li>
-					<li><a id ="feature" href="about.html">Acerca de...</a></li>
-					<!-- <li><a href="contact.html" id="header">Contacto</a></li> -->
-					<li><a  href="blog.html" id="blog"></a></li>
+					<li><a id="feature" onclick="$('#acerca-de').animatescroll({padding:0});">Acerca de</a></li>
 				</ul>
 			</div>
 		</div>
@@ -82,28 +80,31 @@
 				<div class="title"><h3>Descubre esta <span>increíble</span> herramienta</h3></div>
 				<!--   Feature 1  -->
 				<div class="featu">
-					<div class="icon"> <img src="img/icons/buscar.png"  alt="" style="width: 99px;margin-top: 5px;"/>  </div>
-					<h6> Busca</h6>
-					<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit.</p>
-					<div class="step"><p>Step 1</p></div>
+					<div class="icon">
+						<img src="img/icons/buscar.png"  alt="" style="width: 99px;margin-top: 5px;"/>
+					</div>
+					<h6>Busca</h6>
+					<p>Busca donde podrias iniciar un nuevo proyecto/negocio en el mapa.</p>
 				</div> 
 
 				<div class="featu-div"></div>
 				<!--    Feature 2  -->
 				<div class="featu">
-					<div class="icon"> <img src="img/icons/features2.png" alt="" />  </div>
-					<h6> Crea</h6>
-					<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit.</p>
-					<div class="step"><p>Step 2</p></div>
+					<div class="icon">
+						<img src="img/icons/features2.png" alt="" />
+					</div>
+					<h6>Analiza</h6>
+					<p>Analiza los resultados obtenidos de bbva, información del INEGI y del censo económico.</p>
 				</div> 
 
 				<div class="featu-div"></div>
 				<!--    Feature 2  -->
 				<div class="featu">
-					<div class="icon"> <img src="img/icons/features3.png" alt="" />  </div>
+					<div class="icon">
+						<img src="img/icons/features3.png" alt="" />
+					</div>
 					<h6>Compara</h6>
-					<p>Lorem ipsum dolor sit amet cons ectetur adipisicing elit.</p>
-					<div class="step"><p>Step 3</p></div>
+					<p>Compara los resultados con otros codigos postales.</p>
 				</div> 
 			</div>
 		</div><!-- END Features -->
@@ -112,6 +113,7 @@
 			<div id="sidebar-right" class="leaflet-control">
 				<span class="bbvanalyzr-right rp"></span>
 		        <H1>INEGI</H1>
+		        <p>Aquí podras seleccionar una categoría y sub-categoría y podrás ver los datos representandos en el mapa</p><br/>
 		        <div class="firstSelect">
 		        	<select name="first-select" id="first-select" >
 		        		<option value="Sum_POB1" selected="selected">Población</option>
@@ -119,7 +121,7 @@
 		        		<option value="Sum_ECO4">Indice Económico</option>
 		        		<option value="Educa">Educación</option>
 		        		<option value="Conyugal">Situación conyugal</option>
-		        		<option value="Unidades">Unidades economicas</option>
+		        		<option value="Unidades">Unidades económicas</option>
 		        	</select>
 		        </div>
 		        
@@ -169,17 +171,17 @@
 		<div id="tabbed" class="tabbed">
 			<div class="wrapper">
 			<!-- Tabbed Title -->
-				<div class="title">
-					<h3>Tabbed Content For <span> Better Explanation </span> </h3> 
+				<div class="title" id="acerca-de">
+					<h3>Acerca de la <span>herramienta</span> </h3> 
 				</div>
 			</div>
 			<div class="tabbed-features">
 				<div id="tabs">
 					<div class="wrapper"> 
 						<ul class="tabs-nav">
-							<li><a href="#tabs-1"> <img src="img/tabbed1.png" alt="" />What We Do</a></li>
+							<li><a href="#tabs-1"> <img src="img/tabbed1.png" alt="" />¿Qué hacemos?</a></li>
 							<li><a href="#tabs-2"> <img src="img/tabbed2.png" alt="" /></a></li>
-							<li><a href="#tabs-3"> <img src="img/tabbed3.png" alt="" />Metodologia</a></li>
+							<li><a href="#tabs-3"> <img src="img/tabbed3.png" alt="" />Metodología</a></li>
 							<li><a href="#tabs-4"> <img src="img/tabbed4.png" alt="" />Acerca de</a></li>
 						</ul>
 					</div>
@@ -188,11 +190,14 @@
 						<div class="wrapper">
 							<div id="tabs-1">
 								<div class="tabs-text">
-									<h6>The Perfect Showcase.</h6>
-									<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" >Read More</a>
+									<h6>¿Cómo lo hicimos?</h6>
+									<p class="subtitles">Metodología de obtención de datos</p>
+									<p>
+										Basado en información económica y poblacional con relaciones de análisis espacial por ubiación.
+									</p>
+									<a href="#" title="Metodología">Leer más</a>
 								</div>
+								
 								<div class="tabs-img"> 
 									<img src="img/tabbed-picture.png" alt="" />
 								</div>
@@ -200,11 +205,14 @@
 
 							<div id="tabs-2">
 								<div class="tabs-text">
-									<h6>The Awesome Showcase.</h6>
-									<p class="subtitles"> Responsive layout &#38; Beatiful Design </p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<a href="#" >Read More</a>
+									<h6>¿Cómo lo hicimos?</h6>
+									<p class="subtitles">Metodología de obtención de datos</p>
+									<p>
+										Basado en información económica y poblacional con relaciones de análisis espacial por ubiación.
+									</p>
+									<a href="metodologia.txt" target="_blank" title="Metodología">Leer más</a>
 								</div>
+								
 								<div class="tabs-img"> 
 									<img src="img/tabbed-picture3.png" alt="" />
 								</div>
@@ -295,9 +303,9 @@
 			</div>
 			<div class="copy-nav">
 				<ul>
-					<li class="cpyn"><a href="">Home</a><li>
+					<li class="cpyn"><a onclick="$('#htop').animatescroll({padding:0});">Home</a><li>
 					<li class="cpyn"><a onclick="$('#mapa').animatescroll({padding:0});">Mapa</a><li>
-					<li><a href="">Acerca de...</a><li>
+					<li><a onclick="$('#acerca-de').animatescroll({padding:0});">Acerca de</a><li>
 				</ul>
 			</div>
 		</div>

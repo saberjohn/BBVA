@@ -1,0 +1,26 @@
+¿Cómo obtuvimos la información de INEGI?
+La información que obtiene el Instituto Nacional de Estadística y Geografía (INEGI) en sus proyectos más importantes como los censos de población y vivienda son un insumo de gran calidad y peso para diversos estudios realizados no solamente en México sino en el mundo. En México, el último ejercicio del censo se realizó en el año 2010 y sus resultados han sido utilizados para comparar infinidad de variables de económicas, poblacionales, de vivienda, migración, etc.
+Para poder comparar la información de iNEGI con los resultaos abiertos por BBVA Bancomer para el concurso se realizaron diversos procesos para manipular y homologar la información con el fin de mostrar un producto confiable basado en información pública, dichos procesos se enlistan y describen a continuación:
+1. Al haber observado que la distribución de información liberada por BBVA Bancomer está determinada por código postal se determinó que ésta sería la división más pequeña de la información para compararla con las bases de datos de INEGI.
+
+2. Se utilizó la información a nivel manzana del censo de población y vivienda del año 2010 de INEGI. Para esto, al centroide de cada manzana se le asignó la información que contenía esa manzana y se realizó una suma de ciertas variables para cada centroide que se encontrara dentro de los límites de cada polígono para obtener resultados a nivel código postal a través de una unión espacial basada en su ubicación.
+
+3. Las variables seleccionadas que son representativas para el objetivo de brindar información que oriente al usuario a tomar la decisión de dónde ubicar un negocio son las siguientes:
+
+·Información de población total por rangos de edad. Con la estratificación usada es posible realizar una consulta para conocer por ejemplo, la población adolescente o la adulta por código postal en alguno de los tres estados (DF, GDL y MTY) utilizados.
+
+·Información económica. Se tomaron en cuenta aspectos económicos del censo de población para conocer por ejemplo, la población económicamente activa o la población ocupada por código postal.
+
+·Información acerca del estado migratorio de la población, por ejemplo, número de habitantes por código postal nacidos en otro país.
+
+·Información educativa del censo para conocer por ejemplo, total de habitantes por código postal con al menos un grado de educación superior.
+
+·Información con la distinción de la situación conyugal de los habitantes del estado por código postal, por ejemplo, población soltera mayor de 12 años o más.
+
+·Información referente a los bienes en la vivienda más importantes y determinantes para el objetivo del proyecto como por ejemplo, viviendas totales por código postal que cuentan con internet.
+
+
+Así mismo, el INEGI realiza censos económicos cada 5 años en los que registra el número de unidades económicas a nivel nacional. Para analizar esta información se realizó el mismo proceso que con la información censal de 2010 con la diferencia de las dos variables principales resultantes:
+1. Sector al que pertenecen las unidades económicas analizadas por código postal.
+
+2. Número total de unidades económicas por rango del personal remunerado que ocupa para su funcionamiento.
