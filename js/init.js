@@ -199,7 +199,24 @@ function getBasicStats(zipcode, point) {
 		//load buffer local
 		getSeries(datazipcode[zipcode]);
 	}
+	var dataZP = false;
 	
+	L.geoJson(dataGeoJson, {
+		filter: function (feature, layer) {
+			if(zipcode == feature.properties.ZipCode) dataZP = feature.properties;
+			return false;
+		}
+	});
+	
+	var listdata = $("#listdata");
+	listdata.html("");
+	$.each(poblacion, function(val, text) {
+		if(dataZP[val] != undefined) {
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number'>" + dataZP[val] + "</span>"));
+		}
+	});
+	
+	$('.number').number(true, 10);
 	map.setView([sMarker._latlng.lat, sMarker._latlng.lng, map._zoom]);
 }
 
