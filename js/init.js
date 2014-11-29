@@ -139,11 +139,12 @@ function printResults(d) {
 		
 	function onEachFeature(feature, layer) {
 		layer.on('click', function(e) {
+			rightSidebar.hide();
 			map.removeLayer(sMarker);	
 			sMarker = L.marker([e.latlng.lat, e.latlng.lng], { ZipCode : feature.properties.ZipCode }).addTo(map);
 			sMarker.bindPopup("Código postal: " + feature.properties.ZipCode)/*.openPopup()*/;
 			getBasicStats(feature.properties.ZipCode);
-			sMarker.on('click', function () { leftSidebar.show(); });
+			sMarker.on('click', function () { leftSidebar.show();rightSidebar.hide();  });
 		});
 	}
 

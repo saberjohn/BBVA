@@ -17,7 +17,7 @@ ul.bjqs-controls.v-centered li a:hover{
 
 ol.bjqs-markers li a{
 	padding:5px 10px;
-	background:#000;
+	background:#999;
 	color:#fff;
 	margin:5px;
 	text-decoration: none;
@@ -25,7 +25,9 @@ ol.bjqs-markers li a{
 
 ol.bjqs-markers li.active-marker a,
 ol.bjqs-markers li a:hover{
-	background: #999;
+	background: rgba(0,0,0,0.75);
+	font-size: 16px;
+	color:#3fc4d2;
 }
 
 p.bjqs-caption{

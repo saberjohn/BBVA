@@ -44,12 +44,63 @@
 	font-style: normal;
 	
 }
-.bbvanalyzr-navigate-down:before {
+.bbvanalyzr-2:before {
 	content: "\e000";
 }
-.bbvanalyzr-navigate-up:before {
+.bbvanalyzr-postalcode3:before {
 	content: "\e001";
-
+}
+.bbvanalyzr-population:before {
+	content: "\e002";
+}
+.bbvanalyzr-economy:before {
+	content: "\e003";
+}
+.bbvanalyzr-home:before {
+	content: "\e004";
+}
+.bbvanalyzr-down:before {
+	content: "\e005";
+	cursor: pointer;
+}
+.bbvanalyzr-down-city:before {
+	content: "\e005";
+	cursor: pointer;
+}
+.bbvanalyzr-conjugal:before {
+	content: "\e006";
+}
+.bbvanalyzr-conjugal1:before {
+	content: "\e007";
+}
+.bbvanalyzr-right:before {
+	content: "\e008";
+	cursor:  pointer;
+}
+.bbvanalyzr-left:before {
+	content: "\e009";
+	cursor: pointer;
+}
+.bbvanalyzr-left:hover:before {
+	color:#848484;
+}
+.bbvanalyzr-postalcode2:before {
+	content: "\e00a";
+}
+.bbvanalyzr-postalcode1:before {
+	content: "\e00b";
+}
+.bbvanalyzr-postalcode:before {
+	content: "\e00c";
+}
+.bbvanalyzr-education1:before {
+	content: "\e00d";
+}
+.bbvanalyzr-education:before {
+	content: "\e00e";
+}
+.bbvanalyzr-up:before {
+	content: "\e00f";
 }
 
 /* ######## 1 - Reset Styles #########  */ 
@@ -96,12 +147,29 @@ input, button, select, textarea {
 }
 /* BBVA Styles */
 
+
+.rotate{  display: inline-block;
+	padding:0 10px 0 0;
+  -ms-transform: rotate(180deg) !important;
+  -webkit-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;}
+
+
+
 .selecciona-ciudad{;height:0;top:-60px;z-index:1;position: absolute;padding: 0;-webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);box-shadow: inset 0 3px 6px rgba(0,0,0,.05);margin: 0 auto;width: 100%;}
-#first-select,#second-select{width:100%;margin: 0px auto 10px;line-height: 30px;padding: 0 10px;background-color: #f5f5f5;}
+#first-select,#second-select,.third-select{width:100%;margin: 0px auto 10px;line-height: 30px;padding: 0 10px;background-color: #f5f5f5;}
+.third-select{width:50%;}
 select{border-radius:0;-webkit-appearance: none;color: #848484;}
-#sidebar-left h1,#sidebar-right h1{text-shadow: 1px 1px 1px rgba(255,255,255,0.4);color: #3fc4d2;font-weight: 400;width: 100%;text-align:  center;padding:10px;font-size: initial;}
-.openSC{position:absolute;top:59px;left:50%;background-color:white;line-height: 20px;cursor:pointer;}
-.openSC span::before{vertical-align: middle;color:#848484;}
+#sidebar-left h1,#sidebar-right h1{text-shadow: 1px 1px 1px rgba(255,255,255,0.4);color: #3fc4d2;font-weight: 600;width: 100%;text-align:  center;padding:10px;font-size: initial;-webkit-font-smoothing: antialiased;
+}}
+/*.openSC{position:absolute;top:59px;left:50%;background-color:red;line-height: 20px;cursor:pointer;}*/
+.openSC{display: block;width: 100%;}
+.openSC span::before{background-color:#ffffff;vertical-align: middle;color:#848484;}
 .openSC span:hover::before{color:#3fc4d2;
 -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
@@ -116,13 +184,7 @@ select{border-radius:0;-webkit-appearance: none;color: #848484;}
     -o-transition: all 0.25s linear;
     transition: all 0.25 linear
 }
-.showSC{visibility:visible;top:0;
-    -webkit-transition: all 0.25s linear;
-    -moz-transition: all 0.25s linear;
-    -o-transition: all 0.25s linear;
-    transition: all 0.25 linear
-}
-.rp{position: absolute;right: 330px;background: #ffffff;z-index: 99999;top: 5px;color: #f5f5f5;padding-right: 10px;}
+.rp{position: absolute;right: 335px;background: #ffffff;z-index: 99999;top: 5px;color: #f5f5f5;padding:0 5px;}
 /* ######## 2 - General Styles ######  */ 
  
 .wrapper { width:940px; margin:auto; }
@@ -389,7 +451,7 @@ box-shadow:1px 0px 2px rgba(0,0,0,0.2);
 
 .scroll-top  { line-height:44px;width: 40px;
 height: 40px;display:block !important;z-index:99999;position:fixed;bottom:15px;margin-right: 10px;background-color: rgba(0,0,0,0.5);text-align:center;cursor: pointer;}
-.scroll-top::before{font-size:16px;color:#ffffff;-webkit-transition: all 0.25s linear;
+.scroll-top::before{color:#ffffff;-webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     -o-transition: all 0.25s linear;
     transition: all 0.25 linear}
