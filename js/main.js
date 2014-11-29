@@ -91,6 +91,7 @@ $('.test ').on('click','li',function(e){
 		$('div.inec').removeClass('active');
 		$('div.educacion').removeClass('active');
 		$('div.unec').removeClass('active');
+		$('div.sconyugal').removeClass('active');
 	}
 	if (valor === "vivienda") {
 		$('div.vivienda').addClass('active');
@@ -98,6 +99,7 @@ $('.test ').on('click','li',function(e){
 		$('div.inec').removeClass('active');
 		$('div.educacion').removeClass('active');
 		$('div.unec').removeClass('active');
+		$('div.sconyugal').removeClass('active');
 	}
 	if (valor === "inec") {
 		$('div.inec').addClass('active');
@@ -105,6 +107,7 @@ $('.test ').on('click','li',function(e){
 		$('div.poblacion').removeClass('active');
 		$('div.educacion').removeClass('active');
 		$('div.unec').removeClass('active');
+		$('div.sconyugal').removeClass('active');
 	}
 	if (valor === "educacion") {
 		$('div.educacion').addClass('active');
@@ -112,6 +115,15 @@ $('.test ').on('click','li',function(e){
 		$('div.inec').removeClass('active');
 		$('div.poblacion').removeClass('active');
 		$('div.unec').removeClass('active');
+		$('div.sconyugal').removeClass('active');
+	}
+	if (valor === "sconyugal") {
+		$('div.sconyugal').addClass('active');
+		$('div.vivienda').removeClass('active');
+		$('div.inec').removeClass('active');
+		$('div.poblacion').removeClass('active');
+		$('div.unec').removeClass('active');
+		$('div.educacion').removeClass('active');
 	}
 	if (valor === "unec") {
 		$('div.unec').addClass('active');
@@ -119,6 +131,7 @@ $('.test ').on('click','li',function(e){
 		$('div.inec').removeClass('active');
 		$('div.educacion').removeClass('active');
 		$('div.poblacion').removeClass('active');
+		$('div.sconyugal').removeClass('active');
 	}
 
 });
