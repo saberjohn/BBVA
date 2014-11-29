@@ -147,7 +147,7 @@ function printResults(d) {
 		});
 	}
 
-	$('.number').number(true, 2);
+	$('.number-2').number(true, 0);
 }
 
 /*get zipcode from point*/
@@ -212,11 +212,11 @@ function getBasicStats(zipcode, point) {
 	listdata.html("");
 	$.each(poblacion, function(val, text) {
 		if(dataZP[val] != undefined) {
-			listdata.append($('<li></li>').html(text + ":" + " <span class='number'>" + dataZP[val] + "</span>"));
+			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
 	
-	$('.number').number(true, 10);
+	$('.number-2').number(true, 0);
 	map.setView([sMarker._latlng.lat, sMarker._latlng.lng, map._zoom]);
 }
 
