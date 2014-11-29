@@ -1,7 +1,8 @@
 /*  Cyan Skin   */ 
 
 /*  Titles Span   */ 
-h3 span { color:#3fc4d2; }
+h3 span { font-size:16px;color:#3fc4d2;-webkit-font-smoothing: antialiased}
+h3{font-size: 16px !important; color:#333;}
 h4 span { color:#3fc4d2; }
 
 /*  Buttons   */ 
