@@ -76,8 +76,17 @@ $(function() {
 	$('.openSC').click(function(event) {
 		$('.selecciona-ciudad').toggleClass('showSC');
 		$('.nav').toggleClass('showSC');
+		$('.openSC > .bbvanalyzr-down-city').toggleClass('rotate');
 	});
 });
+$(function(){
+
+	$('.rp').on('click',function(event) {
+		event.preventDefault();
+		rightSidebar.toggle();
+		$('.bbvanalyzr-right').toggleClass('rotate');
+	});
+})
 
 $(document).ready(function() {
 	/* ----------- Datos BBVA ----------------------------*/
@@ -145,6 +154,7 @@ function inegi(value) {
 		break;
 	}
 }
+
 
 /*----------------------------------------------------------------------------------------------------*/
 
