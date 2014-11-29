@@ -113,7 +113,58 @@
 			<div id="sidebar-right" class="leaflet-control">
 				<span class="bbvanalyzr-right rp"></span>
 		        <H1>INEGI</H1>
-		        <p>Aquí podras seleccionar una categoría o sub-categoría y podrás ver los datos representandos en el mapa</p><br/>
+		        <div id="accordion">
+		        	<div id="accordion-bbva" data-collapse="accordion">
+		        		<h3 class="bbva-title" class="open">
+		        			<a data-value="Sum_POB1" href="#">Población</a>
+		        		</h3>
+		        		<div class="bbva-content" aria-hidden="false" style="display: block;">
+							<ul id="pob-option">
+			    				<li></li>
+			    			</ul>
+		        		</div>
+		        		<h3 class="bbva-title" class="close">
+		        			<a data-value="Sum_VIV1" href="#">Vivienda</a>
+		        		</h3>
+		        		<div class="bbva-content" aria-hidden="true" style="display: none;">
+		        			<ul id="viv-option">
+		        				<li></li>
+		        			</ul>
+		        		</div>
+		        		<h3 class="bbva-title" class="close">
+		        			<a data-value="Sum_ECO4" href="#">Indice Económico</a>
+		        		</h3>
+		        		<div class="bbva-content" aria-hidden="true" style="display: none;">
+		    				<ul id="ie-option">
+		        				<li></li>
+		        			</ul>
+		        		</div>
+		        		<h3 class="bbva-title" class="close">
+		        			<a data-value="Educa" href="#">Educación</a>
+		        		</h3>
+		        		<div class="bbva-content" aria-hidden="true" style="display: none;">
+							<ul id="e-option">
+			    				<li></li>
+			    			</ul>
+		        		</div>
+		        		<h3 class="bbva-title" class="close">
+		        			<a data-value="Conyugal" href="#">Situación conyugal</a>
+		        		</h3>
+		        		<div class="bbva-content" aria-hidden="true" style="display: none;">
+		    				<ul id="sc-option">
+		        				<li></li>
+		        			</ul>
+		        		</div>
+		        		<h3 class="bbva-title" class="close">
+		        			<a data-value="Unidades" href="#">Unidades económicas</a>
+		        		</h3>
+		        		<div class="bbva-content" aria-hidden="true" style="display: none;">
+							<ul id="ue-option">
+			    				<li></li>
+			    			</ul>
+		        		</div>
+		        	</div>
+		        </div>
 		        <div class="firstSelect">
 		        	<select name="first-select" id="first-select" >
 		        		<option value="Sum_POB1" selected="selected">Población</option>
@@ -124,7 +175,7 @@
 		        		<option value="Unidades">Unidades económicas</option>
 		        	</select>
 		        </div>
-		        
+
 		        <div class="secondSelect" style="width:100%;">
 		        	<select name="second-select" id="second-select">
 		        	</select>
@@ -143,11 +194,27 @@
 					<option value="num_payments">Número de pagos</option>
 					<option value="num_cards">Número de tarjetas (Solo por día)</option>
 				</select>
-				
 				<div id="banner-slide">
 					<ul class="bjqs"></ul>
 				</div>
-				
+				<ul class="nav nav-pills test" style="visibility:visible;margin:0;padding:5px 0;width:105%;">
+					<li style="padding:5px 0;margin:0" class="col-xs-4 col-sm-4 col-md-4 active">
+						<a href="#" style="padding:10px 5px;">Población</a>
+					</li>
+					<li style="padding:5px;margin:0" class="col-xs-4 col-sm-4 col-md-4">
+						<a href="#" style="padding:10px 5px;">Vivienda</a>
+					</li>
+					<li style="padding:5px;margin:0" class="col-xs-4 col-sm-4 col-md-4">
+						<a href="#" style="padding:10px 5px;">Índice Económico</a>
+					</li>
+					<li style="padding:5px;margin:0" class="col-xs-4 col-sm-4 col-md-4">
+						<a href="#" style="padding:10px 5px;">Educación</a>
+					</li>
+					<li style="padding:5px;margin:0" class="col-xs-4 col-sm-4 col-md-4">
+						<a href="#" style="padding:10px 5px;">Unidades Económicas</a>
+					</li>
+				</ul>
+
     			<div class="sl-body">
 					<ul id="listdata"></ul>
     			</div>
@@ -312,10 +379,14 @@
 	<!-- Javascript Library -->
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.collapse.js"></script>
+	<script type="text/javascript" src="js/jquery.collapse_storage.js"></script>
+	<script type="text/javascript" src="js/jquery.collapse_cookie_storage.js"></script>
 	<script type="text/javascript" src="js/animatescroll.min.js"></script>
 	<script type="text/javascript" src="js/backstretch.js"></script>
 	<script type="text/javascript" src="js/lightbox.js"></script>
 	<script type="text/javascript" src="js/cycle.js"></script>
+
 	<script type="text/javascript" src="js/slider.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script src='http://api.tiles.mapbox.com/mapbox.js/v1.5.0/mapbox.js'></script>
