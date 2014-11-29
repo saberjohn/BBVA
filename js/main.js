@@ -1,20 +1,4 @@
 /*---------  Map -------*/
-var bbva_results = [
-		"avg",
-		"date",
-		"max",
-		"min",
-		"mode",
-		"num_cards",
-		"num_merchants",
-		"num_payments",
-		"peak_payments_day",
-		"peak_payments_hour",
-		"std",
-		"valley_payments_day",
-		"valley_payments_hour"
-];
-
 var poblacion = {
 	"0":"Selecciona una opción",
 	"Sum_POB1":"Población total",
@@ -72,6 +56,31 @@ var conyugal = {
 	"Sum_SCONY4":"Población casada o unida de 12 años y más"
 }
 
+var unidadeseconomicas = {
+	"0":"Selecciona una opción",
+	"Pri0a5":"Sector primario con 0 a 5 personas",
+	"Pri6a10":"Sector primario con 6 a 10 personas",
+	"Pri11a30":"Sector primario con 11 a 30 personas",
+	"Pri31a50":"Sector primario con 31 a 50  personas",
+	"Pri51a100":"Sector primario con 51 a 100 personas",
+	"Pri101a250":"Sector primario con 101 a 250 personas",
+	"Pri251yMas":"Sector primario con 251 y más personas",
+	"Sec0a5":"Sector secundario con 0 a 5 personas",
+	"Sec6a10":"Sector secundario con 6 a 10 personas",
+	"Sec11a30":"Sector secundario con 11 a 30 personas",
+	"Sec31a50":"Sector secundario con 31 a 50  personas",
+	"Sec51a100":"Sector secundario con 51 a 100 personas",
+	"Sec101a250":"Sector secundario con 101 a 250 personas",
+	"Sec251yMas":"Sector secundario con 251 y más personas",
+	"Ter0a5":"Sector terciario con 0 a 5 personas",
+	"Ter6a10":"Sector terciario con 6 a 10 personas",
+	"Ter11a30":"Sector terciario con 11 a 30 personas",
+	"Ter31a50":"Sector terciario con 31 a 50  personas",
+	"Ter51a100":"Sector terciario con 51 a 100 personas",
+	"Ter101a250":"Sector terciario con 101 a 250 personas",
+	"Ter251yMas":"Sector terciario con 251 y más personas"
+}
+
 $(function() {
 	$('.openSC').click(function(event) {
 		$('.selecciona-ciudad').toggleClass('showSC');
@@ -89,12 +98,6 @@ $(function(){
 })
 
 $(document).ready(function() {
-	/* ----------- Datos BBVA ----------------------------*/
-	/*$.each(bbva_results, function(val, text) {
-		$('.response_bbva').append( $('<tr><td>'+val+'</td></tr>'));
-	});
-	*/
-	
 	var firstSelect = $("#first-select");
 	var secondSelect = $("#second-select");
 	
@@ -149,6 +152,12 @@ function inegi(value) {
 		case "Conyugal":
 			secondSelect.children('option').remove();
 			$.each(conyugal, function(val, text) {
+				secondSelect.append( $('<option></option>').val(val).html(text));
+			});
+		break;
+		case "Unidades":
+			secondSelect.children('option').remove();
+			$.each(unidadeseconomicas, function(val, text) {
 				secondSelect.append( $('<option></option>').val(val).html(text));
 			});
 		break;
