@@ -80,7 +80,48 @@ var unidadeseconomicas = {
 	"Ter101a250":"Sector terciario con 101 a 250 personas",
 	"Ter251yMas":"Sector terciario con 251 y más personas"
 }
+$('.test ').on('click','li',function(e){
+	e.preventDefault();
+	valor = this.childNodes[1].id;
+	$('.active').removeClass('active');
+	$(this).addClass('active');
+	if (valor === "poblacion") {
+		$('div.poblacion').addClass('active');
+		$('div.vivienda').removeClass('active');
+		$('div.inec').removeClass('active');
+		$('div.educacion').removeClass('active');
+		$('div.unec').removeClass('active');
+	}
+	if (valor === "vivienda") {
+		$('div.vivienda').addClass('active');
+		$('div.poblacion').removeClass('active');
+		$('div.inec').removeClass('active');
+		$('div.educacion').removeClass('active');
+		$('div.unec').removeClass('active');
+	}
+	if (valor === "inec") {
+		$('div.inec').addClass('active');
+		$('div.vivienda').removeClass('active');
+		$('div.poblacion').removeClass('active');
+		$('div.educacion').removeClass('active');
+		$('div.unec').removeClass('active');
+	}
+	if (valor === "educacion") {
+		$('div.educacion').addClass('active');
+		$('div.vivienda').removeClass('active');
+		$('div.inec').removeClass('active');
+		$('div.poblacion').removeClass('active');
+		$('div.unec').removeClass('active');
+	}
+	if (valor === "unec") {
+		$('div.unec').addClass('active');
+		$('div.vivienda').removeClass('active');
+		$('div.inec').removeClass('active');
+		$('div.educacion').removeClass('active');
+		$('div.poblacion').removeClass('active');
+	}
 
+});
 $(function() {
 	$('.openSC').click(function(event) {
 		$('.selecciona-ciudad').toggleClass('showSC');

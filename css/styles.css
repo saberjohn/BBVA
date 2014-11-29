@@ -146,7 +146,17 @@ input, button, select, textarea {
   
 }
 /* BBVA Styles */
-
+#listdata li{padding:5px;font-size: 16px;border-bottom:1px solid #eeeeee;}
+#listdata li:last-child{border-bottom:0;}
+#listdata li > span{padding:5px;}
+.tab-content>.active {
+	display: block;
+	-webkit-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-ms-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
 .bbva-title{
 	background-color: rgb(63,196,210);
 	border-bottom: 0;
