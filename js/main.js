@@ -1,20 +1,4 @@
 /*---------  Map -------*/
-var bbva_results = [
-		"avg",
-		"date",
-		"max",
-		"min",
-		"mode",
-		"num_cards",
-		"num_merchants",
-		"num_payments",
-		"peak_payments_day",
-		"peak_payments_hour",
-		"std",
-		"valley_payments_day",
-		"valley_payments_hour"
-];
-
 var poblacion = {
 	"0":"Selecciona una opción",
 	"Sum_POB1":"Población total",
@@ -99,12 +83,6 @@ $(function() {
 });
 
 $(document).ready(function() {
-	/* ----------- Datos BBVA ----------------------------*/
-	/*$.each(bbva_results, function(val, text) {
-		$('.response_bbva').append( $('<tr><td>'+val+'</td></tr>'));
-	});
-	*/
-	
 	var firstSelect = $("#first-select");
 	var secondSelect = $("#second-select");
 	
