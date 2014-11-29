@@ -218,29 +218,44 @@ function getBasicStats(zipcode, point) {
 			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
+	
+	var listdata2 = $("#listdata2");
+	listdata2.html("");
 	$.each(vivienda, function(val, text) {
 		if(dataZP[val] != undefined) {
-			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+			listdata2.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
+	
+	var listdata3 = $("#listdata3");
+	listdata3.html("");
 	$.each(economico, function(val, text) {
 		if(dataZP[val] != undefined) {
-			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+			listdata3.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
+	
+	var listdata4 = $("#listdata4");
+	listdata4.html("");
 	$.each(educacion, function(val, text) {
 		if(dataZP[val] != undefined) {
-			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+			listdata4.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
+	
+	var listdata5 = $("#listdata5");
+	listdata5.html("");
 	$.each(conyugal, function(val, text) {
 		if(dataZP[val] != undefined) {
-			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+			listdata5.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
+	
+	var listdata6 = $("#listdata6");
+	listdata6.html("");
 	$.each(unidadeseconomicas, function(val, text) {
 		if(dataZP[val] != undefined) {
-			listdata.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
+			listdata6.append($('<li></li>').html(text + ":" + " <span class='number-2'>" + dataZP[val] + "</span>"));
 		}
 	});
 	
