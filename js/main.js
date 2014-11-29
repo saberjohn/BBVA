@@ -66,7 +66,7 @@ var educacion = {
 	"Sum_EDU46":"Población de 25 años y más con al menos un grado aprobado en educación superior"
 }
 
-var conyugal = {
+var unidadeseconomicas = {
 	"0":"Selecciona una opción",
 	"Sum_SCONY1":"Población soltera o nunca unida de 12 años y más",
 	"Sum_SCONY4":"Población casada o unida de 12 años y más"
@@ -138,6 +138,12 @@ function inegi(value) {
 			});
 		break;
 		case "Conyugal":
+			secondSelect.children('option').remove();
+			$.each(conyugal, function(val, text) {
+				secondSelect.append( $('<option></option>').val(val).html(text));
+			});
+		break;
+		case "Unidades":
 			secondSelect.children('option').remove();
 			$.each(conyugal, function(val, text) {
 				secondSelect.append( $('<option></option>').val(val).html(text));
