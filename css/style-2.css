@@ -40,3 +40,9 @@ a { cursor:pointer; }
 
 #points-graph { display:none; }
 #points-graph-age { display:none; }
+
+.testi p.testio a {
+	font-size: 16px;
+	color: #222424;
+	font-style: normal;
+}
