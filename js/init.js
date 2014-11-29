@@ -82,6 +82,19 @@ $(document).ready( function () {
 			console.log("Selecciona un código postal del mapa");
 		}
 	});
+	
+	$("#focus-city li a").click( function () {
+		$('.selecciona-ciudad').toggleClass('showSC');
+		$('.nav').toggleClass('showSC');
+
+		$("#focus-city li").removeClass('active');
+		$(this).parent().addClass('active');
+		
+		leftSidebar.hide();
+		rightSidebar.hide();
+		
+		focusCity($(this).attr("id"));
+	});
 });
 
 /*print geojson zipcodes by city*/

@@ -8,6 +8,8 @@
   padding: 10px;
   z-index: 2000; }
   .leaflet-sidebar.left {
+      width: 550px; }
+  .leaflet-sidebar.left {
     left: -550px;
     transition: left 0.5s, width 0.5s;
     padding-right: 0; }
