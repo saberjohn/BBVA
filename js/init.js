@@ -11,24 +11,19 @@ var data    = false;
 var datazipcode	= [];
 var sMarker = false;
 
+//legend
 legend = L.control({position: 'bottomright'});
-
 legend.onAdd = function (map) {
-
-		var div = L.DomUtil.create('div', 'info legend'),
-				grades = [0, 5, 20, 40, 60],
-				labels = [];
-				div.innerHTML ='<h5><strong></strong></h5>';
-		// loop through our density intervals and generate a label with a colored square for each interval
-		for (var i = 0; i < grades.length; i++) {	
-				div.innerHTML +=
-						'<i style="background-color:red;"></i><small>hola</small>';
-		}
+		var div = L.DomUtil.create('div', 'info legend');
+			
+		div.innerHTML ='<h5><strong>Series</strong></h5>';
+		div.innerHTML += '<i style="background-color:#FFD4C4;">&nbsp;&nbsp;&nbsp;</i><small> <span class="serie1">0-0</span></small><br/>';
+		div.innerHTML += '<i style="background-color:#FF8069;">&nbsp;&nbsp;&nbsp;</i><small> <span class="serie2">0-0</span></small><br/>';
+		div.innerHTML += '<i style="background-color:#E84E3D;">&nbsp;&nbsp;&nbsp;</i><small> <span class="serie3">0-0</span></small><br/>';
+		div.innerHTML += '<i style="background-color:#E63629;">&nbsp;&nbsp;&nbsp;</i><small> <span class="serie4">0-0</span></small><br/>';
 		return div;
 };
 legend.addTo(map);
-
-
 
 //set geojson with data state
 var dataGeoJson = DFGeoJson;
@@ -98,7 +93,7 @@ $(document).ready( function () {
 		if(sMarker) {
 			getSeries(datazipcode[sMarker.options.ZipCode]);
 		} else {
-			console.log("Selecciona un código postal del mapa");
+			//console.log("Selecciona un código postal del mapa");
 		}
 	});
 	
@@ -147,6 +142,12 @@ function printResults(d) {
 			}
 		}
 	}
+	
+	//reries-range-legend
+	$(".serie1").html(ranges[0]);
+	$(".serie2").html(ranges[1]);
+	$(".serie3").html(ranges[2]);
+	$(".serie4").html(ranges[3]);
 	
 	var polygons = L.geoJson(d, {
 		onEachFeature: onEachFeature,
@@ -203,8 +204,6 @@ function getBasicStats(zipcode, point) {
 				type: 'POST', 
 				url: baseurl + '/basic-stats/' + zipcode + '/',
 				success: function (d) {
-					console.log(d);
-					
 					//set global array data buffer
 					datazipcode[zipcode] = d;
 					getSeries(d);
@@ -348,13 +347,13 @@ function getSeries(d) {
 	}
 	
 	if(gender_distribution == false && day == false) {
-		console.log("No se encontraron datos por día y genero para este código postal");
+		//console.log("No se encontraron datos por día y genero para este código postal");
 	} else {
 		getTimeSeriesChart(day, gender_distribution);
 	}
 	
 	if(d.age_distribution == undefined || d.age_distribution == false) {
-		console.log("No se encontraron datos rango de edades para este código postal");
+		//console.log("No se encontraron datos rango de edades para este código postal");
 		var age_distribution = false;
 	} else {
 		
@@ -402,7 +401,7 @@ function getSeries(d) {
 	} else {
 		markersCustZC.clearLayers();
 		polylinesGroup.clearLayers();
-		console.log("No se encontraron datos de clientes para este código postal");
+		//console.log("No se encontraron datos de clientes para este código postal");
 	}
 	
 	$('#banner-slide').bjqs({

@@ -251,11 +251,9 @@ $(function() {
 $(document).ready(function() {
 	var s = $(".sub-wrap");
 	var pos = s.position();
-	console.log(pos);               
+	              
 	$(window).scroll(function() {
 		var windowpos = $(window).scrollTop();
-		console.log(windowpos);
-		console.log(pos);
 		
 		if (windowpos >= pos) {
 			s.addClass("stick");
