@@ -10,7 +10,7 @@
   .leaflet-sidebar.left {
       width: 550px; }
   .leaflet-sidebar.left {
-    left: -575px;
+    left: -580px;
     transition: left 0.5s, width 0.5s;
     padding-right: 0; }
     .leaflet-sidebar.left.visible {
@@ -73,27 +73,27 @@
     .rp{right:330px !important;transition: right 0.5s, width 0.5s;}
     .leaflet-sidebar {
       width: 350px; }
-    .leaflet-sidebar.left{width:575px;}
+    .leaflet-sidebar.left{width:580px;}
       .leaflet-sidebar.left.visible ~ .leaflet-left {
-        left: 575px; }
+        left: 580px; }
       .leaflet-sidebar.right.visible ~ .leaflet-right {
         right: 305px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .rp{right:330px !important;transition: right 0.5s, width 0.5s;}
     .leaflet-sidebar {
       width: 350px; }
-    .leaflet-sidebar.left{width:575px;}
+    .leaflet-sidebar.left{width:580px;}
       .leaflet-sidebar.left.visible ~ .leaflet-left {
-        left: 575px; }
+        left: 580px; }
       .leaflet-sidebar.right.visible ~ .leaflet-right {
         right: 390px; } }
   @media (min-width: 1200px) {
     .leaflet-sidebar {
       /*width: 460px;*/
       width: 350px; }
-    .leaflet-sidebar.left{width:575px;}
+    .leaflet-sidebar.left{width:580px;}
       .leaflet-sidebar.left.visible ~ .leaflet-left {
-        left: 575px; }
+        left: 580px; }
       .leaflet-sidebar.right.visible ~ .leaflet-right {
         right: 460px; } }
   .leaflet-sidebar .close {

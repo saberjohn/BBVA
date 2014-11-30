@@ -146,6 +146,8 @@ input, button, select, textarea {
   
 }
 /* BBVA Styles */
+.city li{width:auto;}
+
 #listdata li,
 #listdata2 li,
 #listdata3 li
