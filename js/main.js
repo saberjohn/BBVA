@@ -80,6 +80,7 @@ var unidadeseconomicas = {
 	"Ter101a250":"Sector terciario con 101 a 250 personas",
 	"Ter251yMas":"Sector terciario con 251 y más personas"
 }
+
 $('.test ').on('click','li',function(e){
 	e.preventDefault();
 	valor = this.childNodes[1].id;
