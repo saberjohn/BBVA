@@ -146,9 +146,31 @@ input, button, select, textarea {
   
 }
 /* BBVA Styles */
-#listdata li{padding:5px;border-bottom:1px solid #eeeeee;}
-#listdata li:last-child{border-bottom:0;}
-#listdata li > span{padding:5px;}
+#listdata li,
+#listdata2 li,
+#listdata3 li
+#listdata4 li,
+#listdata5 li,
+#listdata6 li{
+	padding:5px;border-bottom:1px solid #eeeeee;
+}
+#listdata li:last-child,
+#listdata2 li:last-child,
+#listdata3 li:last-child,
+#listdata4 li:last-child,
+#listdata5 li:last-child,
+#listdata6 li:last-child{
+	border-bottom:0;
+}
+#listdata li > span,
+#listdata2 li > span,
+#listdata3 li > span,
+#listdata4 li > span,
+#listdata5 li > span,
+#listdata6 li > span{
+	padding:3px;
+	color:#3fc4d2;
+}
 .tab-content>.active {
 	display: block;
 	-webkit-transition: all .5s ease-in;
