@@ -24,6 +24,7 @@
       right: 0; }
   .leaflet-sidebar.right > .leaflet-control{
     overflow: visible;
+    height: 300px;
   }
   .leaflet-sidebar > .leaflet-control {
     height: 100%;

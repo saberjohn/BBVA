@@ -150,11 +150,12 @@ input, button, select, textarea {
 
 #listdata li,
 #listdata2 li,
-#listdata3 li
+#listdata3 li,
 #listdata4 li,
 #listdata5 li,
 #listdata6 li{
-	padding:5px;border-bottom:1px solid #eeeeee;
+	border-bottom:1px solid #eeeeee;
+	padding:5px;
 }
 #listdata li:last-child,
 #listdata2 li:last-child,
@@ -171,7 +172,7 @@ input, button, select, textarea {
 #listdata5 li > span,
 #listdata6 li > span{
 	padding:3px;
-	color:#3fc4d2;
+	color:#3fc4d2;	
 }
 .tab-content>.active {
 	display: block;
