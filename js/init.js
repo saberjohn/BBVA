@@ -285,6 +285,9 @@ function getBasicStats(zipcode, point) {
 }
 
 function getSeries(d) {
+	$('.no-graphic').hide();
+	$('.tipo-serie-grafica').hide();
+	
 	$('#banner-slide ul li').remove();
 	$('#banner-slide .bjqs-markers').remove();
 	$('#banner-slide .bjqs-controls').remove();
@@ -407,6 +410,13 @@ function getSeries(d) {
 		width		: 500,
 		automatic	: false
 	});
+	
+	if(gender_distribution == false && day == false && age_distribution == false) {
+		$('.no-graphic').show();
+		$('.tipo-serie-grafica').hide();
+	} else {
+		$('.tipo-serie-grafica').show();
+	}
 	
 	leftSidebar.show();
 }

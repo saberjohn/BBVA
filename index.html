@@ -139,19 +139,23 @@
     			<h1>INFORMACIÓN Y ATRIBUTOS</h1>
     			
     			<h3>Código postal: <span class="zipcode"></span></h3>
-    			
     			<br/>
-    			<p>Selecciona una categoría:</p>
-				<select id="graph-type" class="third-select">
-					<option value="avg" selected="selected">Promedio de pago</option>
-					<option value="num_payments">Número de pagos</option>
-					<option value="num_cards">Número de tarjetas (Solo por día)</option>
-				</select>
-				<br/>
+    			
+    			<div class="tipo-serie-grafica">
+					<p>Selecciona una categoría:</p>
+					<select id="graph-type" class="third-select">
+						<option value="avg" selected="selected">Promedio de pago</option>
+						<option value="num_payments">Número de pagos</option>
+						<option value="num_cards">Número de tarjetas (Solo por día)</option>
+					</select>
+					<br/>
+				</div>
+				
 				<div class="alert alert-info alert-dismissible fade in no-graphic" role="alert">
 			      <h4 style="font-size:18px;font-weight:600;">Oh, lo siento!</h4>
 			      <p>No se encontro información para graficar.</p>
 			    </div>
+
 				<div id="banner-slide">
 					<ul class="bjqs"></ul>
 				</div>
