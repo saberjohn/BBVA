@@ -169,6 +169,7 @@ $(document).ready(function() {
 		propertySelected = $(this).val();
 		if(propertySelected != "0") {
 			printResults(dataGeoJson);
+			setMarkers(datazipcode[sMarker.options.ZipCode].customer_zipcodes, sMarker.options.ZipCode); 
 		}
 	});
 });
@@ -390,15 +391,17 @@ $(".scroll-top a").click(function() {
 /*---------	Contact Form  -------*/
  
  $(document).ready(function(){
+	$('#send').click(function(){
+	 
+	$.post("mailer.php", $("#contactform").serialize(),  function(response) {
+	$('#success').html(response);
+	//$('#success').hide('slow');
+	});
+	return false;
+	 
+	});
  
-$('#send').click(function(){
- 
-$.post("mailer.php", $("#contactform").serialize(),  function(response) {
-$('#success').html(response);
-//$('#success').hide('slow');
-});
-return false;
- 
-});
- 
+	$('#mapa').hover(function(){
+		$('#mapa').animatescroll({padding:0});
+	});
 });

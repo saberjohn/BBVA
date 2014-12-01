@@ -4,6 +4,9 @@
 * Licensed under the MIT license
 */
 function setMarkers(d, ZipCode) {
+	markersCustZC.clearLayers();
+	polylinesGroup.clearLayers();
+	
 	var graphType = $("#graph-type option:selected").val();
 	if(graphType == "avg") graphType = "incomes";
 	
