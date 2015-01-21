@@ -241,7 +241,7 @@ select{border-radius:0;-webkit-appearance: none;color: #848484;}
 #sidebar-left h1,#sidebar-right h1{text-shadow: 1px 1px 1px rgba(255,255,255,0.4);color: #3fc4d2;font-weight: 600;width: 100%;text-align:  center;padding:10px;font-size: initial;-webkit-font-smoothing: antialiased;
 }}
 /*.openSC{position:absolute;top:59px;left:50%;background-color:red;line-height: 20px;cursor:pointer;}*/
-.openSC{display: block;width: 100%;}
+.openSC{display: block;width: 100%;position: absolute;left: 50%;}
 .openSC span{display: inline-block;
 background: none;
 left: 50%;
